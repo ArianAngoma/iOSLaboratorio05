@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CCCFEC622613D720081C0A1 /* CrearTareaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCCFEC522613D720081C0A1 /* CrearTareaViewController.swift */; };
+		3CCCFEC8226146250081C0A1 /* TareaCompletadaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCCFEC7226146250081C0A1 /* TareaCompletadaViewController.swift */; };
 		3CE9EAC32257F9A100D35973 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9EAC22257F9A100D35973 /* AppDelegate.swift */; };
 		3CE9EAC52257F9A100D35973 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9EAC42257F9A100D35973 /* ViewController.swift */; };
 		3CE9EAC82257F9A200D35973 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE9EAC62257F9A200D35973 /* Main.storyboard */; };
@@ -15,7 +17,6 @@
 		3CE9EAD02257F9A400D35973 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CE9EACE2257F9A400D35973 /* LaunchScreen.storyboard */; };
 		3CE9EADB2257F9A400D35973 /* laboratorio05AngomaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9EADA2257F9A400D35973 /* laboratorio05AngomaTests.swift */; };
 		3CE9EAE62257F9A400D35973 /* laboratorio05AngomaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9EAE52257F9A400D35973 /* laboratorio05AngomaUITests.swift */; };
-		3CE9EAFC2258010200D35973 /* Tarea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE9EAFB2258010200D35973 /* Tarea.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3CCCFEC522613D720081C0A1 /* CrearTareaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearTareaViewController.swift; sourceTree = "<group>"; };
+		3CCCFEC7226146250081C0A1 /* TareaCompletadaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TareaCompletadaViewController.swift; sourceTree = "<group>"; };
 		3CE9EABF2257F9A100D35973 /* laboratorio05Angoma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = laboratorio05Angoma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE9EAC22257F9A100D35973 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CE9EAC42257F9A100D35973 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +53,6 @@
 		3CE9EAE12257F9A400D35973 /* laboratorio05AngomaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = laboratorio05AngomaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE9EAE52257F9A400D35973 /* laboratorio05AngomaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = laboratorio05AngomaUITests.swift; sourceTree = "<group>"; };
 		3CE9EAE72257F9A400D35973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3CE9EAFB2258010200D35973 /* Tarea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarea.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +105,9 @@
 			children = (
 				3CE9EAC22257F9A100D35973 /* AppDelegate.swift */,
 				3CE9EAC42257F9A100D35973 /* ViewController.swift */,
-				3CE9EAFB2258010200D35973 /* Tarea.swift */,
 				3CE9EAC62257F9A200D35973 /* Main.storyboard */,
+				3CCCFEC7226146250081C0A1 /* TareaCompletadaViewController.swift */,
+				3CCCFEC522613D720081C0A1 /* CrearTareaViewController.swift */,
 				3CE9EACC2257F9A400D35973 /* Assets.xcassets */,
 				3CE9EACE2257F9A400D35973 /* LaunchScreen.storyboard */,
 				3CE9EAD12257F9A400D35973 /* Info.plist */,
@@ -262,10 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CCCFEC622613D720081C0A1 /* CrearTareaViewController.swift in Sources */,
 				3CE9EAC52257F9A100D35973 /* ViewController.swift in Sources */,
 				3CE9EAC32257F9A100D35973 /* AppDelegate.swift in Sources */,
 				3CE9EACB2257F9A200D35973 /* laboratorio05Angoma.xcdatamodeld in Sources */,
-				3CE9EAFC2258010200D35973 /* Tarea.swift in Sources */,
+				3CCCFEC8226146250081C0A1 /* TareaCompletadaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

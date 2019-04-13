@@ -43,26 +43,121 @@
                     <connections>
                         <outlet property="tableView" destination="LmL-6P-O6B" id="RI3-Po-LRa"/>
                         <segue destination="s8t-yT-dYN" kind="show" identifier="agregarTarea" id="9cf-qz-8PV"/>
+                        <segue destination="8ws-9m-WVv" kind="show" identifier="tareaSeleccionadaSegue" id="Zng-Ts-ZGQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="980" y="26.53673163418291"/>
         </scene>
-        <!--View Controller-->
+        <!--Crear Tarea View Controller-->
         <scene sceneID="QnV-pq-u7v">
             <objects>
-                <viewController id="s8t-yT-dYN" sceneMemberID="viewController">
+                <viewController id="s8t-yT-dYN" customClass="CrearTareaViewController" customModule="laboratorio05Angoma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VzN-VD-3YN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQd-pb-oQo">
+                                <rect key="frame" x="154" y="79" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z2C-3j-H31">
+                                <rect key="frame" x="40" y="133" width="295" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Importante" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdR-Xg-ifk">
+                                <rect key="frame" x="145" y="203" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rfx-ds-xTJ">
+                                <rect key="frame" x="163" y="234" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdK-ua-N0B">
+                                <rect key="frame" x="160" y="295" width="55" height="30"/>
+                                <state key="normal" title="Agregar"/>
+                                <connections>
+                                    <action selector="agregar:" destination="s8t-yT-dYN" eventType="touchUpInside" id="XC4-qs-epP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AQz-gw-eQr" firstAttribute="trailing" secondItem="Rfx-ds-xTJ" secondAttribute="trailing" constant="163" id="712-L6-g3J"/>
+                            <constraint firstItem="hdK-ua-N0B" firstAttribute="top" secondItem="Rfx-ds-xTJ" secondAttribute="bottom" constant="30" id="EnI-EH-K2z"/>
+                            <constraint firstItem="hdK-ua-N0B" firstAttribute="leading" secondItem="AQz-gw-eQr" secondAttribute="leading" constant="160" id="JrK-DA-ayQ"/>
+                            <constraint firstItem="z2C-3j-H31" firstAttribute="top" secondItem="CQd-pb-oQo" secondAttribute="bottom" constant="33" id="QF9-SU-p3u"/>
+                            <constraint firstItem="AQz-gw-eQr" firstAttribute="trailing" secondItem="z2C-3j-H31" secondAttribute="trailing" constant="40" id="Qr7-u4-xDD"/>
+                            <constraint firstItem="AQz-gw-eQr" firstAttribute="trailing" secondItem="rdR-Xg-ifk" secondAttribute="trailing" constant="145" id="RY7-bB-w82"/>
+                            <constraint firstItem="AQz-gw-eQr" firstAttribute="trailing" secondItem="CQd-pb-oQo" secondAttribute="trailing" constant="154" id="RoM-hX-7sN"/>
+                            <constraint firstItem="AQz-gw-eQr" firstAttribute="trailing" secondItem="hdK-ua-N0B" secondAttribute="trailing" constant="160" id="a1P-XW-PR1"/>
+                            <constraint firstItem="Rfx-ds-xTJ" firstAttribute="leading" secondItem="AQz-gw-eQr" secondAttribute="leading" constant="163" id="cbd-e7-dOX"/>
+                            <constraint firstItem="CQd-pb-oQo" firstAttribute="top" secondItem="AQz-gw-eQr" secondAttribute="top" constant="15" id="iB0-to-zOg"/>
+                            <constraint firstItem="CQd-pb-oQo" firstAttribute="centerX" secondItem="VzN-VD-3YN" secondAttribute="centerX" id="idu-IU-BJJ"/>
+                            <constraint firstItem="rdR-Xg-ifk" firstAttribute="leading" secondItem="AQz-gw-eQr" secondAttribute="leading" constant="145" id="lfj-4P-YKb"/>
+                            <constraint firstItem="Rfx-ds-xTJ" firstAttribute="top" secondItem="rdR-Xg-ifk" secondAttribute="bottom" constant="58" id="sZW-AB-xLO"/>
+                            <constraint firstItem="rdR-Xg-ifk" firstAttribute="top" secondItem="z2C-3j-H31" secondAttribute="bottom" constant="40" id="seY-a5-lEf"/>
+                            <constraint firstItem="z2C-3j-H31" firstAttribute="leading" secondItem="AQz-gw-eQr" secondAttribute="leading" constant="40" id="uUe-JG-WDT"/>
+                            <constraint firstItem="Rfx-ds-xTJ" firstAttribute="top" secondItem="rdR-Xg-ifk" secondAttribute="bottom" constant="10" id="vPG-Q5-Pgo"/>
+                            <constraint firstItem="CQd-pb-oQo" firstAttribute="leading" secondItem="AQz-gw-eQr" secondAttribute="leading" constant="154" id="zaj-VA-WfX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="AQz-gw-eQr"/>
                     </view>
+                    <connections>
+                        <outlet property="swImportante" destination="Rfx-ds-xTJ" id="VTn-UI-Mpg"/>
+                        <outlet property="txtNombreTarea" destination="z2C-3j-H31" id="vjY-EY-5PL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfD-Ux-6Oz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1756" y="27"/>
+            <point key="canvasLocation" x="1756" y="26.53673163418291"/>
+        </scene>
+        <!--Tarea Completada View Controller-->
+        <scene sceneID="oMf-cA-3Mc">
+            <objects>
+                <viewController id="8ws-9m-WVv" customClass="TareaCompletadaViewController" customModule="laboratorio05Angoma" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e4S-g3-Bur">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4f-wS-lnf">
+                                <rect key="frame" x="75" y="84" width="226" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pt-HL-VNj">
+                                <rect key="frame" x="132" y="134" width="104" height="30"/>
+                                <state key="normal" title="Completado"/>
+                                <connections>
+                                    <action selector="completarTarea:" destination="8ws-9m-WVv" eventType="touchUpInside" id="gJx-fw-vxu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8pt-HL-VNj" firstAttribute="top" secondItem="m4f-wS-lnf" secondAttribute="bottom" constant="20" id="5Ob-bi-2at"/>
+                            <constraint firstItem="m4f-wS-lnf" firstAttribute="top" secondItem="pwb-1L-M8V" secondAttribute="top" constant="20" id="C71-Ml-4J2"/>
+                            <constraint firstItem="pwb-1L-M8V" firstAttribute="trailing" secondItem="m4f-wS-lnf" secondAttribute="trailing" constant="161" id="Ort-GW-wip"/>
+                            <constraint firstItem="8pt-HL-VNj" firstAttribute="leading" secondItem="pwb-1L-M8V" secondAttribute="leading" constant="132" id="PmH-FT-sXf"/>
+                            <constraint firstItem="m4f-wS-lnf" firstAttribute="leading" secondItem="pwb-1L-M8V" secondAttribute="leading" constant="154" id="ZaL-QK-6Fu"/>
+                            <constraint firstItem="pwb-1L-M8V" firstAttribute="trailing" secondItem="8pt-HL-VNj" secondAttribute="trailing" constant="139" id="fmN-GH-IiF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pwb-1L-M8V"/>
+                    </view>
+                    <connections>
+                        <outlet property="tareaLabel" destination="m4f-wS-lnf" id="ZID-mL-gJG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K08-ak-HMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2528.8000000000002" y="26.53673163418291"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gPW-PE-52j">
@@ -80,7 +175,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lpz-6d-3ZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44" y="685.90704647676171"/>
+            <point key="canvasLocation" x="241" y="27"/>
         </scene>
     </scenes>
 </document>
